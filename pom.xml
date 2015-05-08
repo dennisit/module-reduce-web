@@ -8,23 +8,12 @@
     <artifactId>module-reduce-web</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>jd-vip-plus-admin</name>
+    <name>module-reduce-web</name>
     <url>http://maven.apache.org</url>
 
     <properties>
         <spring.framework.version>3.1.1.RELEASE</spring.framework.version>
-        <jd-common.version>1.0-SNAPSHOT</jd-common.version>
-        <api.version>1.0-SNAPSHOT</api.version>
-        <common.version>1.0-SNAPSHOT</common.version>
-        <domain.version>1.0-SNAPSHOT</domain.version>
-        <dao.version>1.0-SNAPSHOT</dao.version>
-        <manager.version>1.0-SNAPSHOT</manager.version>
-        <service.version>1.0-SNAPSHOT</service.version>
-        <junit.version>4.9</junit.version>
-        <ibatis.version>2.3.4.726</ibatis.version>
         <commons-lang3.version>3.1</commons-lang3.version>
-        <ehcache.version>2.6.6</ehcache.version>
-        <cxf.version>2.2.4</cxf.version>
         <slf4j.version>1.6.1</slf4j.version>
     </properties>
 
