@@ -43,7 +43,7 @@ import java.util.Map;
 @RequestMapping("/moduleReduce")
 public class ModuleReduceController extends BaseMultiController{
 
-    public static final int DEFAULT_PAGE_SIZE = 5;
+    public static final int DEFAULT_PAGE_SIZE = 15;
 
 
     @Resource(name = "moduleReduceClient")
