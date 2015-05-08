@@ -1,0 +1,144 @@
+#parse("/WEB-INF/views/common/header.vm")
+<!-- 正文面板开始-->
+<div class="main-content">
+
+    <!--START PAGE CRUMB -->
+    <div class="breadcrumbs" id="breadcrumbs">
+        <script type="text/javascript">
+            try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+        </script>
+        <ul class="breadcrumb">
+            <li><i class="ace-icon fa fa-home home-icon"></i><a href="#">首页</a></li>
+            <li class="active">服务注册</li>
+        </ul>
+        <div class="nav-search" id="nav-search">
+            <form class="form-search">
+                <span class="input-icon">
+                    <input type="text" placeholder="搜索" class="nav-search-input" id="nav-search-input" autocomplete="off" style="width:250px;"/>
+                    <i class="ace-icon fa fa-search nav-search-icon"></i>
+                </span>
+            </form>
+        </div>
+    </div>
+    <!--END PAGE CRUMB -->
+
+    <!--START PAGE CONTENT -->
+    <div class="page-content">
+
+        #parse("/WEB-INF/views/common/console.vm")
+
+        <!-- ==============行模块(表单)开始==================== -->
+        <div class="row">
+            <!--start col-xs-12-->
+            <div class="col-xs-12 widget-container-col">
+                <!-- start inner row -->
+                <div class="row">
+                    <div class="space-8"></div>
+                    <div class="col-sm-12">
+                        <!--页面正文内容开始-->
+                        <div id="wizard" class="content-wizard">
+                            <div>
+                                <form method="post" id="moduleInsertForm" action="put">
+                                    <table class="table table-bordered table-striped formLayout m0">
+                                        <colgroup>
+                                            <col width="15%">
+                                            <col width="35%">
+                                            <col width="15%">
+                                            <col width="35%">
+                                        </colgroup>
+                                        <tbody>
+                                        <tr>
+                                            <td class="textL w110">
+                                               应用说明
+                                            </td>
+                                            <td class="textL" colspan="3">
+                                                服务降级中间件
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="textL w110">
+                                                作者
+                                            </td>
+                                            <td class="textL" colspan="3">
+                                                En.dennisit | Cn.苏若年
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="textL w110">
+                                                联系作者
+                                            </td>
+                                            <td class="textL" colspan="3">
+                                                dennisit@163.com
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="textL w110">
+                                                组件地址
+                                            </td>
+                                            <td class="textL" colspan="3">
+                                                1、组件MSD依赖：https://github.com/dennisit/module-reduce<br/>
+                                                2、组件MDS系统：https://github.com/dennisit/module-reduce-web
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="textL w110">
+                                                如何使用
+                                            </td>
+                                            <td class="textL" colspan="3">
+                                                1、创建SQL<br/>
+                                                <pre>
+CREATE TABLE `tb_module_reduce` (
+    `id` bigint(20) NOT NULL AUTO_INCREMENT,
+    `module_name` varchar(40) COLLATE utf8_bin NOT NULL COMMENT '服务模块',
+    `module_switch` tinyint(4) NOT NULL DEFAULT '0' COMMENT '是否降级,1降级0不降级',
+    `module_depict` varchar(100) COLLATE utf8_bin DEFAULT '' COMMENT '业务描述',
+    `module_token` varchar(150) COLLATE utf8_bin NOT NULL DEFAULT '' COMMENT '认证key',
+    PRIMARY KEY (`id`),
+    UNIQUE KEY `module_name` (`module_name`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;</pre><br/>
+                                                2、应用中引入依赖包<br/>
+<pre>
+&lt;dependency&gt;
+     &lt;groupId>com.dobby&lt;/groupId&gt;
+     &lt;artifactId>module-reduce&lt;/artifactId&gt;
+     &lt;version>1.0-SNAPSHOT&lt;/version&gt;
+&lt;/dependency></pre><br/>
+                                                3、实例化客户端
+                                                <pre>
+&lt;bean id="moduleTable" class="com.plugin.server.reduce.object.ModuleTable"&gt;
+    &lt;property name="tableName" value="tb_module_reduce" /&gt;
+    &lt;property name="primaryKey" value="id" /&gt;
+    &lt;property name="moduleName" value="module_name" /&gt;
+    &lt;property name="moduleSwitch" value="module_switch" /&gt;
+    &lt;property name="moduleDepict" value="module_depict" /&gt;
+    &lt;property name="moduleToken" value="module_token" /&gt;
+&lt;/bean&gt;
+&lt;bean id="moduleReduceClient" class="com.plugin.server.reduce.ModuleReduceFacotyBean"&gt;
+    &lt;property name="dataSource" ref="dataSource" /&gt;
+    &lt;property name="moduleTable" ref="moduleTable" /&gt;
+&lt;/bean&gt;</pre>
+                                                4、客户端API织入代码
+                                                5、部署MDS：https://github.com/dennisit/module-reduce-web,织入同样的数据源.即可
+
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-8"></div>
+                </div>
+                <!-- end inner row -->
+            </div>
+            <!--end col-xs-12-->
+        </div>
+        <!-- ==============行模块(表格)结束==================== -->
+
+    </div>
+    <!--END PAGE CONTENT -->
+
+</div>
+<!-- 正文面板结束-->
+#parse("/WEB-INF/views/common/bottom.vm")

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+	default-autowire="byName">
+
+	<import resource="classpath*:context/spring-config-datasource.xml" />
+
+	<bean id="moduleTable" class="com.plugin.server.reduce.object.ModuleTable">
+		<property name="tableName" value="tb_module_reduce" />
+		<property name="primaryKey" value="id" />
+		<property name="moduleName" value="module_name" />
+		<property name="moduleSwitch" value="module_switch" />
+		<property name="moduleDepict" value="module_depict" />
+		<property name="moduleToken" value="module_token" />
+	</bean>
+
+	<bean id="moduleReduceClient" class="com.plugin.server.reduce.ModuleReduceFacotyBean">
+		<property name="dataSource" ref="moduleReduceDataSource" />
+		<property name="moduleTable" ref="moduleTable" />
+	</bean>
+
+</beans>

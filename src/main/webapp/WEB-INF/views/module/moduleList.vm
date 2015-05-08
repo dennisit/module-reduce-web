@@ -1,0 +1,179 @@
+#parse("/WEB-INF/views/common/header.vm")
+<!-- 正文面板开始-->
+<div class="main-content">
+
+    <!--START PAGE CRUMB -->
+    <div class="breadcrumbs" id="breadcrumbs">
+        <script type="text/javascript">
+            try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+        </script>
+        <ul class="breadcrumb">
+            <li><i class="ace-icon fa fa-home home-icon"></i><a href="#">首页</a></li>
+            <li class="active">服务列表</li>
+        </ul>
+        <div class="nav-search" id="nav-search">
+            <form class="form-search">
+                <span class="input-icon">
+                    <input type="text" placeholder="搜索" class="nav-search-input" id="nav-search-input" autocomplete="off" style="width:250px;"/>
+                    <i class="ace-icon fa fa-search nav-search-icon"></i>
+                </span>
+            </form>
+        </div>
+    </div>
+    <!--END PAGE CRUMB -->
+
+    <!--START PAGE CONTENT -->
+    <div class="page-content">
+
+        #parse("/WEB-INF/views/common/console.vm")
+
+        <!--start inner row -->
+        <div class="row">
+            <!-- start col-sm-12 -->
+            <div class="col-sm-12">
+                <div class="space-8"></div>
+                <!--clASS="well"-->
+                <div class="widget-box widget-color-blue2-tb">
+                    <input type="hidden" name="pageNumber" value="$!page.pageNum" id="pageNumber"/>
+                    <input type="hidden" name="pagePerSize" value="$!page.pageSize" id="pagePerSize"/>
+                    <form id="moduleSearchForm" method="post" action="pages" novalidate="novalidate">
+                        <table class="width100">
+                            <tbody>
+                            <tr>
+                                <td class="textL w70">服务名称：</td>
+                                <td class="w180">
+                                    <input type="text" placeholder="服务名称" value="$!searchObject.moduleName" name="moduleName" id="moduleName" class="search-input-txt w150">
+                                </td>
+                                <td class="textR w70">服务状态：</td>
+                                <td class="w180">
+                                    <select class="w150" name="moduleSwitch" id="moduleSwitch">
+                                        <option value="">--选择状态--</option>
+                                        <option value="1" #if($!searchObject.moduleSwitch==1) selected #end>运行中</option>
+                                        <option value="0" #if($!searchObject.moduleSwitch==0) selected #end>已关闭</option>
+                                    </select>
+                                </td>
+                                <td class="vam" rowspan="1">
+                                    <a class="btn btn-primary btn-sm" href="javascript:void(0);" id="search-btn"><i class="ace-icon fa fa-search"></i>搜索</a>
+                                    <a class="btn btn-primary btn-sm" href="javascript:void(0);" id="insert-btn"><i class="ace-icon fa fa-plus"></i>注册服务</a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+            </div>
+            <!-- end col-sm-12 -->
+        </div>
+        <!--end inner row -->
+
+        <!--start inner row -->
+        <div class="row">
+            <!-- start col-sm-12 -->
+            <div class="col-sm-12">
+                <div class="space-8"></div>
+                <!--表格样式开始-->
+                <div class="widget-box widget-color-blue2">
+                    <!---->
+                    <div class="widget-header">
+                        <h5 class="widget-title bigger lighter"><i class="ace-icon fa fa-table"></i>服务数据</h5>
+                    </div>
+                    <div class="widget-body"  id="page-result">
+                        <div class="widget-main no-padding">
+                            <table class="table table-striped table-bordered table-condensed tree_table table-hover"> <!--table-condensed-->
+                                <thead>
+                                <tr>
+                                    <th>服务编号</th>
+                                    <th>服务名称</th>
+                                    <th>服务开关</th>
+                                    <th>服务描述</th>
+                                    <th>Token值</th>
+                                    <th>操作</th>
+                                </tr>
+                                </thead>
+
+                                <tbody>
+                                    #if($!page.items.size()>0)
+                                        #foreach($!moduleObject in $!page.items)
+                                        <tr/>
+                                        <td>$!moduleObject.primaryKey</td>
+                                        <td>$!moduleObject.moduleName</td>
+                                        <td class="hidden-480">
+                                            #if($!moduleObject.moduleSwitch == 1)
+                                                <span class="label label-success arrowed-in arrowed-in-right">运行中</span>
+                                            #else
+                                                <span class="label label-inverse arrowed-in arrowed-in-right">已关闭</span>
+                                            #end
+                                        </td>
+                                        <td>
+                                            $!moduleObject.moduleDepict
+                                        </td>
+                                        <td>
+                                            $!moduleObject.moduleToken
+                                        </td>
+                                        <td>
+                                            #if($!moduleObject.moduleSwitch == 1)
+                                                <a href="javascript:void(0)" class="close-btn" data-name="$!moduleObject.moduleName" data-token="$!moduleObject.moduleToken">关闭</a>
+                                            #else
+                                                <a href="javascript:void(0);" class="open-btn" data-name="$!moduleObject.moduleName" data-token="$!moduleObject.moduleToken">开启</a>
+                                            #end
+                                        </td>
+                                        </tr>
+                                        #end
+                                    #else
+                                    <tr>
+                                        <td class="center" colspan="6"> 没有相关记录</td>
+                                    </tr>
+                                    #end
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                    <!--end widget-body-->
+                </div>
+                <!--表格样式结束-->
+
+                <!--分页组件开始-->
+                <div id="pager" ></div>
+                <!--分页组件开始-->
+                <div class="space-8"></div>
+            </div>
+            <!-- end col-sm-12 -->
+        </div>
+        <!--end inner row -->
+    </div>
+    <!--END PAGE CONTENT -->
+
+</div>
+<!-- 正文面板结束-->
+#parse("/WEB-INF/views/common/bottom.vm")
+
+<script type="text/javascript" language="javascript">
+    jQuery(document).ready(function() {
+       jQuery("#pager").pager({ pagenumber: $!page.pageNum, pagecount: $!page.totalPage, buttonClickCallback: PageClick });
+    });
+
+    PageClick = function(pageclickednumber) {
+        jQuery("#pager").pager({ pagenumber: pageclickednumber,  pagecount: $!page.totalPage, buttonClickCallback: PageClick });
+        GlobalBlock.showBlock("获取数据...");
+        jQuery.ajax( {
+            url:'/moduleReduce/page',
+            data: {
+                    "pageNumber" : pageclickednumber,
+                    "pagePerSize": jQuery.trim($!page.pageSize),
+                    "moduleName":  jQuery.trim(jQuery("#moduleName").val()),
+                    "moduleSwitch":jQuery.trim(jQuery("#moduleSwitch").val()),
+                    "dt":new Date().getTime()
+                 },
+            type:'post',
+            cache:false,
+            dataType:'text',
+            success:function(data) {
+                GlobalBlock.hideBlock(500);
+                jQuery("#pageNumber").val(pageclickednumber);
+                jQuery("#page-result").html(data);
+            }
+        });
+    }
+</script>
+<script src="/assets/js/module-reduce/module-reduce.js"></script>

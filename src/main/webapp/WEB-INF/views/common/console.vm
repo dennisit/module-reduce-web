@@ -1,0 +1,42 @@
+<!-- start ace-settings-container -->
+<div class="ace-settings-container" id="ace-settings-container">
+    <div class="btn btn-app btn-xs btn-warning ace-settings-btn" id="ace-settings-btn">
+        <i class="ace-icon fa fa-cog bigger-150"></i>
+    </div>
+    <div class="ace-settings-box clearfix" id="ace-settings-box">
+        <div class="pull-left width-50">
+            <div class="ace-settings-item">
+                <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-navbar" />
+                <label class="lbl" for="ace-settings-navbar"> 固定顶部</label>
+            </div>
+            <div class="ace-settings-item">
+                <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-sidebar" />
+                <label class="lbl" for="ace-settings-sidebar"> 固定菜单</label>
+            </div>
+            <div class="ace-settings-item">
+                <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-breadcrumbs" />
+                <label class="lbl" for="ace-settings-breadcrumbs"> 固定导航</label>
+            </div>
+            <div class="ace-settings-item">
+                <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-add-container" />
+                <label class="lbl" for="ace-settings-add-container">面板居中</label>
+            </div>
+        </div><!-- /.pull-left -->
+
+        <div class="pull-left width-50">
+            <div class="ace-settings-item">
+                <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-hover" />
+                <label class="lbl" for="ace-settings-hover"> 鼠标划过显示子菜单</label>
+            </div>
+            <div class="ace-settings-item">
+                <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-compact" />
+                <label class="lbl" for="ace-settings-compact"> 块状菜单栏</label>
+            </div>
+            <div class="ace-settings-item">
+                <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-highlight" />
+                <label class="lbl" for="ace-settings-highlight">活动菜单样式</label>
+            </div>
+        </div><!-- /.pull-left -->
+    </div><!-- end ace-settings-box -->
+</div>
+<!-- end ace-settings-container -->

@@ -1,0 +1,8 @@
+label.error {
+     height: 28px;
+     background:url("../../images/unchecked.gif") no-repeat 0px 8px;
+     line-height: 29px;
+     padding-left: 18px;
+     color: #EA5200;
+     margin-left: 10px;
+ }

@@ -1,0 +1,109 @@
+#parse("/WEB-INF/views/common/header.vm")
+<!-- 正文面板开始-->
+<div class="main-content">
+
+    <!--START PAGE CRUMB -->
+    <div class="breadcrumbs" id="breadcrumbs">
+        <script type="text/javascript">
+            try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+        </script>
+        <ul class="breadcrumb">
+            <li><i class="ace-icon fa fa-home home-icon"></i><a href="#">首页</a></li>
+            <li class="active">服务注册</li>
+        </ul>
+        <div class="nav-search" id="nav-search">
+            <form class="form-search">
+                <span class="input-icon">
+                    <input type="text" placeholder="搜索" class="nav-search-input" id="nav-search-input" autocomplete="off" style="width:250px;"/>
+                    <i class="ace-icon fa fa-search nav-search-icon"></i>
+                </span>
+            </form>
+        </div>
+    </div>
+    <!--END PAGE CRUMB -->
+
+    <!--START PAGE CONTENT -->
+    <div class="page-content">
+
+        #parse("/WEB-INF/views/common/console.vm")
+
+        <!-- ==============行模块(表单)开始==================== -->
+        <div class="row">
+            <!--start col-xs-12-->
+            <div class="col-xs-12 widget-container-col">
+                <!-- start inner row -->
+                <div class="row">
+                    <div class="space-8"></div>
+                    <div class="col-sm-12">
+                        <!--页面正文内容开始-->
+                        <div id="wizard" class="content-wizard">
+                            <div>
+                                <form method="post" id="moduleInsertForm" action="put">
+                                    <table class="table table-bordered table-striped formLayout m0">
+                                        <colgroup>
+                                            <col width="15%">
+                                            <col width="35%">
+                                            <col width="15%">
+                                            <col width="35%">
+                                        </colgroup>
+                                        <tbody>
+                                        <tr>
+                                            <td class="textL w110">
+                                                <label class="necessary">服务名称</label>
+                                            </td>
+                                            <td class="textL" colspan="3">
+                                                <input type="text" id="moduleName" name="moduleName" value="$!moduleObject.moduleName" class="col-xs-6 table_input_txt" aria-required="true" placeholder="应用服务名称">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="textL w110">
+                                                <label class="necessary">服务状态</label>
+                                            </td>
+                                            <td class="textL" colspan="3">
+                                                <input type="radio" value="1" checked name="moduleSwitch"> 开启
+                                                <input type="radio" value="0" name="moduleSwitch"> 关闭
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="textL w110">
+                                                <label class="necessary">服务描述</label>
+                                            </td>
+                                            <td class="textL" colspan="3">
+                                                <input type="text" id="moduleDepict" name="moduleDepict" value="$!moduleObject.moduleDepict" class="col-xs-6 table_input_txt" aria-required="true" placeholder="服务业务简要描述">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="textL w110">
+                                                <label class="necessary">Token值</label>
+                                            </td>
+                                            <td class="textL" colspan="3">
+                                                <input type="text" id="moduleToken" name="moduleToken" value="$!moduleObject.moduleToken" class="col-xs-6 table_input_txt" aria-required="true" placeholder="应用服务调用认证Token">
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="actionBar">
+                            <span class="red">$!message</span>
+                            <a id="submit-btn" href="javascript:void(0);" class="btn btn-primary btn-xs pull-right">保存</a>
+                            <a id="reset-btn" href="javascript:void(0);" class="btn btn-primary btn-xs mr5 pull-right">重置</a>
+                        </div>
+                        <!--页面正文内容结束-->
+                    </div>
+                    <div class="space-8"></div>
+                </div>
+                <!-- end inner row -->
+            </div>
+            <!--end col-xs-12-->
+        </div>
+        <!-- ==============行模块(表格)结束==================== -->
+
+    </div>
+    <!--END PAGE CONTENT -->
+
+</div>
+<!-- 正文面板结束-->
+#parse("/WEB-INF/views/common/bottom.vm")
+<script src="/assets/js/module-reduce/module-reduce.js"></script>

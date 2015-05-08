@@ -1,0 +1,370 @@
+.table_input_txt{ font-size: 13px;height: 28px !important;line-height: 1.3;text-indent:2px;}
+.necessary:before{ content:"*";color:red;padding:0px 3px;}
+.content-wizard .loader { background: url("../images/base/progress.gif") no-repeat scroll 5px center #fff;border: 1px solid #ffd700;color: #5a5655;display: none;float: left;margin: 2px 0 0 2px;padding: 8px 10px 8px 40px;position: relative;z-index: 998;}
+.search-input-txt{
+	height:28px; line-height:28px;padding:4px 5px; size:12px; color:red;
+}
+.m0{margin:0px}.m5{margin:5px}.m10{margin:10px}.m15{margin:15px}.m30{margin:30px}
+.mt0{margin-top:0px;}.mt5{margin-top:5px}.mt10{margin-top:10px}.mt15{margin-top:15px}.mt20{margin-top:20px}.mt30{margin-top:30px}
+.mb0{margin-bottom:0px}.mb5{margin-bottom:5px}.mb10{margin-bottom:10px}.mb15{margin-bottom:15px}.mb20{margin-bottom:20px}.mb30{margin-bottom:30px}
+.ml0{margin-left:0px}.ml5{margin-left:5px}.ml10{margin-left:10px}.ml15{margin-left:15px}.ml20{margin-left:20px}.ml30{margin-left:30px}
+.mr0{margin-right:0px}.mr5{margin-right:5px}.mr10{margin-right:10px}.mr15{margin-right:15px}.mr20{margin-right:20px}.mr30{margin-right:30px}
+.textR{
+	text-align: right;
+}
+.textL{
+	text-align: left;
+}
+.w10 {
+    width: 10px;
+}
+.w20 {
+    width: 20px;
+}
+.w30 {
+    width: 30px;
+}
+.w40 {
+    width: 40px;
+}
+.w50 {
+    width: 50px;
+}
+.w60 {
+    width: 60px;
+}
+.w70 {
+    width: 70px;
+}
+.w80 {
+    width: 80px;
+}
+.w90 {
+    width: 90px;
+}
+.w100 {
+    width: 100px;
+}
+.w110 {
+    width: 110px;
+}
+.w120 {
+    width: 120px;
+}
+.w130 {
+    width: 130px;
+}
+.w140 {
+    width: 140px;
+}
+.w150 {
+    width: 150px;
+}
+.w160 {
+    width: 160px;
+}
+.w170 {
+    width: 170px;
+}
+.w180 {
+    width: 180px;
+}
+.w190 {
+    width: 190px;
+}
+.w200 {
+    width: 200px;
+}
+.w220 {
+    width: 220px;
+}
+.w240 {
+    width: 240px;
+}
+.w260 {
+    width: 260px;
+}
+.w280 {
+    width: 280px;
+}
+.w300 {
+    width: 300px;
+}
+.w400 {
+    width: 400px;
+}
+.w500 {
+    width: 500px;
+}
+.w600 {
+    width: 600px;
+}
+.w700 {
+    width: 700px;
+}
+.w800 {
+    width: 800px;
+}
+.w900 {
+    width: 900px;
+}
+.w1000 {
+    width: 1000px;
+}
+.width50 {
+    width: 50%;
+}
+.width100 {
+    width: 100%;
+}
+.widthAuto {
+    width: auto;
+}
+
+.content-wizard {
+    border: 0px solid #ccc;
+}
+.content-wizard ul.anchor li {
+    display: inline-block;
+    float: left;
+    list-style: outside none none;
+    margin-right: 30px;
+}
+.content-wizard ul.anchor, .form-wizard ul.anchor {
+    clear: both;
+}
+.content-wizard .loader {
+    background: url("../img/progress.gif") no-repeat scroll 5px center #fff;
+    border: 1px solid #ffd700;
+    color: #5a5655;
+    display: none;
+    float: left;
+    margin: 2px 0 0 2px;
+    padding: 8px 10px 8px 40px;
+    position: relative;
+    z-index: 998;
+}
+.content-wizard ul.anchor {
+    background: none repeat scroll 0 0 #f3f3f3;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 1px 0 #f9f9f9 inset, 0 0 3px #ccc;
+    margin: 0;
+    padding: 10px 10px 0;
+}
+.content-wizard ul.anchor li a {
+    display: inline-block;
+    text-decoration: none;
+}
+.content-wizard ul.anchor li a.selected .stepNumber {
+    background: linear-gradient(to bottom, rgba(255, 103, 15, 1) 0%, rgba(229, 82, 13, 1) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border-radius: 100%;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    float: left;
+    font-size: 18px;
+    font-weight: bold;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5), 0 1px 0 rgba(0, 0, 0, 0.2);
+    width: 40px;
+}
+.content-wizard ul.anchor li a.selected .stepDesc {
+    color: #d44908;
+    display: inline-block;
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 5px;
+    padding: 3px;
+    text-transform: uppercase;
+}
+.content-wizard ul.anchor li a.selected .stepDesc small {
+    color: #666;
+    display: block;
+    font-size: 12px;
+    font-weight: normal;
+    text-transform: none;
+}
+.content-wizard ul.anchor li a.done .stepNumber {
+    background: linear-gradient(to bottom, rgba(41, 154, 11, 1) 0%, rgba(37, 127, 10, 1) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border-radius: 100%;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    float: left;
+    font-size: 18px;
+    font-weight: bold;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5), 0 1px 0 rgba(0, 0, 0, 0.2);
+    width: 40px;
+}
+.content-wizard ul.anchor li a.done .stepDesc {
+    color: #227708;
+    display: inline-block;
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 5px;
+    padding: 3px;
+    text-transform: uppercase;
+}
+.content-wizard ul.anchor li a.done .stepDesc small {
+    color: #666;
+    display: block;
+    font-size: 12px;
+    font-weight: normal;
+    text-transform: none;
+}
+.content-wizard ul.anchor li a.disabled {
+    cursor: default;
+}
+.content-wizard ul.anchor li a.disabled .stepNumber {
+    background: none repeat scroll 0 0 #ccc;
+    border-radius: 100%;
+    color: #fff;
+    display: inline-block;
+    float: left;
+    font-size: 18px;
+    font-weight: bold;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    width: 40px;
+}
+.content-wizard ul.anchor li a.disabled .stepDesc {
+    color: #999;
+    display: inline-block;
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 5px;
+    padding: 3px;
+    text-transform: uppercase;
+}
+.content-wizard ul.anchor li a.disabled .stepDesc small {
+    color: #999;
+    display: block;
+    font-size: 12px;
+    font-weight: normal;
+    text-transform: none;
+}
+.content-wizard .msgBox, .msgBox {
+    background-color: #bedfa3;
+    border: 1px solid #397a04;
+    border-radius: 5px;
+    color: #1cb115;
+    display: none;
+    float: left;
+    margin: 0;
+    min-width: 200px;
+    padding: 5px;
+    position: relative;
+    z-index: 999;
+}
+.content-wizard .msgBox .content, .msgBox .content {
+    float: left;
+    padding: 2px 0 0 5px;
+}
+.content-wizard .msgBox .close {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    color: #000 !important;
+    display: block;
+    float: right;
+    margin: 0 0 0 5px;
+    outline-style: none;
+    padding: 0 2px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+}
+.content-wizard .msgBox .close:hover {
+    border: 1px solid #ea8511;
+    color: #ea8511;
+}
+.content-wizard .msgBox .msg_error_icon {
+    float: left;
+    line-height: 20px;
+    margin-top: 0;
+}
+.content-wizard .buttonCancel {
+    background: linear-gradient(to bottom, #7abcff 0%, #60abf8 44%, #4096ee 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 1px solid #2d77c3;
+    border-radius: 5px;
+    box-shadow: 0 1px 0 #bbd9f4 inset, 0 0 3px #ccc;
+    color: #fff;
+    display: inline-block;
+    float: right;
+    margin: 1px 2px 0 3px;
+    outline-style: none;
+    padding: 5px 8px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5), 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+.content-wizard .buttonNext {
+    background: linear-gradient(to bottom, #7abcff 0%, #60abf8 44%, #4096ee 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 1px solid #2d77c3;
+    border-radius: 5px;
+    box-shadow: 0 1px 0 #bbd9f4 inset, 0 0 3px #ccc;
+    color: #fff;
+    display: inline-block;
+    float: right;
+    margin: 1px 2px 0 3px;
+    outline-style: none;
+    padding: 5px 8px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5), 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+.content-wizard .buttonDisabled {
+    background: none repeat scroll 0 0 #ccc !important;
+    border: 1px solid #bbb !important;
+    box-shadow: none !important;
+    color: #f8f8f8 !important;
+    cursor: text;
+}
+.content-wizard .buttonPrevious {
+    background: linear-gradient(to bottom, #7abcff 0%, #60abf8 44%, #4096ee 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 1px solid #2d77c3;
+    border-radius: 5px;
+    box-shadow: 0 1px 0 #bbd9f4 inset, 0 0 3px #ccc;
+    color: #fff;
+    display: inline-block;
+    float: right;
+    margin: 1px 2px 0 3px;
+    outline-style: none;
+    padding: 5px 8px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5), 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+.content-wizard .buttonFinish {
+    background: linear-gradient(to bottom, #7abcff 0%, #60abf8 44%, #4096ee 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 1px solid #2d77c3;
+    border-radius: 5px;
+    box-shadow: 0 1px 0 #bbd9f4 inset, 0 0 3px #ccc;
+    color: #fff;
+    display: inline-block;
+    float: right;
+    margin: 1px 2px 0 3px;
+    outline-style: none;
+    padding: 5px 8px;
+    text-align: center;
+    text-decoration: none;
+}
+.actionBar {
+    background: none repeat scroll 0 0 #f3f3f3;
+    padding: 10px;
+}
+.actionBar:before, .actionBar:after {
+    content: "";
+    display: table;
+}
+.actionBar:after {
+    clear: both;
+}

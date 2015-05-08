@@ -1,0 +1,38 @@
+
+    <!-- start copyright -->
+    <div class="footer">
+        <div class="footer-inner">
+            <div class="footer-content">
+                <span class="bigger-100"><span class="blue bolder">服务降级</span>管理总线 &copy; 2013-2014</span>
+            </div>
+        </div>
+    </div>
+    <!-- end copyright -->
+
+    <!-- start gototop -->
+    <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+        <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+    </a>
+    <!-- end gototop -->
+
+</div>
+<!--END MAIN CONTAINER -->
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/jquery-ui.custom.min.js"></script>
+<script src="/assets/js/jquery.ui.touch-punch.min.js"></script>
+<script src="/assets/js/jquery.easypiechart.min.js"></script>
+<script src="/assets/js/jquery.sparkline.min.js"></script>
+<script src="/assets/js/flot/jquery.flot.min.js"></script>
+<script src="/assets/js/flot/jquery.flot.pie.min.js"></script>
+<script src="/assets/js/flot/jquery.flot.resize.min.js"></script>
+<!-- ace scripts -->
+<script src="/assets/js/ace-elements.min.js"></script>
+<script src="/assets/js/ace.min.js"></script>
+<!-- inline scripts related to this page -->
+<!-- page specific plugin scripts -->
+<!--[if lte IE 8]>
+<script src="/assets/js/excanvas.min.js"></script>
+<![endif]-->
+</body>
+</html>
+
